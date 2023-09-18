@@ -16,6 +16,11 @@ h2 {
     font-size: 45px;
     font-weight: 900;
 }
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 
 
@@ -29,8 +34,30 @@ h2 {
     border: 1px solid #F9D783;
     height: 46px;
     border-radius: 999px;
+
+    transition: background-color 0.15s, color 0.15s;
+    
     i {
         margin-left: 8px;
+        transition: background-color 0.15s, color 0.15s;
+    }
+
+    &:hover {
+        background-color: #191919;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
+    }
+
+    &:active {
+        background-color: #9b9b9b;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
     }
 }
 .btn-transparent{
@@ -38,8 +65,30 @@ h2 {
     border: 1px solid #191919;
     height: 46px;
     border-radius: 999px;
+    
+    transition: background-color 0.15s, color 0.15s;
+    
     i {
         margin-left: 8px;
+        transition: background-color 0.15s, color 0.15s;
+    }
+
+    &:hover {
+        background-color: #191919;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
+    }
+
+    &:active {
+        background-color: #9b9b9b;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
     }
 }
 .btn-black{
@@ -47,8 +96,30 @@ h2 {
     border: 1px solid #F9D783;
     height: 46px;
     border-radius: 999px;
+   
+    transition: background-color 0.15s, color 0.15s;
+    
     i {
         margin-left: 8px;
+        transition: background-color 0.15s, color 0.15s;
+    }
+
+    &:hover {
+        background-color: #191919;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
+    }
+
+    &:active {
+        background-color: #9b9b9b;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
     }
 }
 
@@ -145,10 +216,13 @@ header {
                     padding: 0px;
                     width: 122px;
                     display: flex;
-
-                    
-                    
                     justify-content: space-between;
+                    
+                    i {
+                        &:hover {
+                            color: #c2bebe;
+                        }
+                    }
                 }
             }
 
@@ -172,6 +246,10 @@ header {
                     a {
                         text-decoration: none;
                         color: #191919;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
                 
@@ -376,7 +454,6 @@ main {
     }
 }
 
-// DOES NOT HAVE INTERACTIVE LINKS YET
 footer {
     grid-area: footer;
     background-color: #0E1021;
@@ -394,8 +471,16 @@ footer {
             align-items: center;
             height: 430px;
 
+            @media (max-width: 767px) {
+                justify-content: space-around;
+            }
+
             .logo-and-text {
                 max-width: 290px;
+
+                @media (max-width: 1199px) {
+                    display: none;
+                }
 
                 img {
                     margin-bottom: 30px;
@@ -406,6 +491,14 @@ footer {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                @media (max-width: 767px) {
+                    &.last {
+                            display: none;
+                    }
+                }
+
+                
                 
                 p {
                     font-size: 22px;
@@ -424,6 +517,18 @@ footer {
         border-top: 1px solid #3E404D;
 
         .container {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+
+                height: auto;
+                padding: 20px 50px;
+
+                .social-media {
+                    font-size: 25px;
+                }
+            }
+
             display: flex;
             justify-content: space-between;
             align-items: center;
