@@ -376,73 +376,66 @@ main {
     }
 }
 
+// DOES NOT HAVE INTERACTIVE LINKS YET
 footer {
     grid-area: footer;
     background-color: #0E1021;
-    color: #B6B6BC;
-    height: 512px;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .upper, .lower, .container, p, a, i {
+        color: #B6B6BC;
+        text-decoration: none;
+    }
 
-        height: 100%;
+    .upper {
 
-        .footer-top {
+        .container {
             display: flex;
             justify-content: space-between;
-    
+            align-items: center;
+            height: 430px;
+
             .logo-and-text {
-                border: 1px solid white;
-                width: 300px;
-                margin-right: 100px;
-    
+                max-width: 290px;
+
                 img {
                     margin-bottom: 30px;
                 }
-    
+            }
+
+            .content-box {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
                 p {
-                    font-size: 16px;
-                    color: #B6B6BC;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: white;
+                }
+                
+                a {
+                    display: block;
                 }
             }
-    
-            .content-box {
-                border: 1px solid white;
-                min-width: 200px;
-            }
-    
-            p {
-                color: #FFFFFF;
-                font-family: dm sans, Arial, Helvetica, sans-serif;
-                font-size: 20px;
-                margin-bottom: 30px;
-            }
-    
-            a {
-                display: block;
-                color: #B6B6BC;
-                text-decoration: none;
-                font-size: 16px;
-                margin-bottom: 10px;
-            }
         }
-    
-        .footer-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    }
 
-            height: 50px;    
-            border-top: 1px solid #3E404D;
-    
+    .lower {
+        border-top: 1px solid #3E404D;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 76px;
+
             .copyright {
-                color: #B6B6BC;
-    
+                font-size: 15px;
             }
-    
+
             .social-media {
+                display: flex;
+                gap: 26px;
 
                 i {
                     color: white;

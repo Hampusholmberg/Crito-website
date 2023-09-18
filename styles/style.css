@@ -333,58 +333,52 @@ main .features .container .content-small.bottom-right {
 footer {
   grid-area: footer;
   background-color: #0E1021;
-  color: #B6B6BC;
-  height: 512px;
 }
-footer .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-footer .container .footer-top {
-  display: flex;
-  justify-content: space-between;
-}
-footer .container .footer-top .logo-and-text {
-  border: 1px solid white;
-  width: 300px;
-  margin-right: 100px;
-}
-footer .container .footer-top .logo-and-text img {
-  margin-bottom: 30px;
-}
-footer .container .footer-top .logo-and-text p {
-  font-size: 16px;
-  color: #B6B6BC;
-}
-footer .container .footer-top .content-box {
-  border: 1px solid white;
-  min-width: 200px;
-}
-footer .container .footer-top p {
-  color: #FFFFFF;
-  font-family: dm sans, Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-footer .container .footer-top a {
-  display: block;
+footer .upper, footer .lower, footer .container, footer p, footer a, footer i {
   color: #B6B6BC;
   text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 10px;
 }
-footer .container .footer-bottom {
+footer .upper .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 50px;
+  align-items: center;
+  height: 430px;
+}
+footer .upper .container .logo-and-text {
+  max-width: 290px;
+}
+footer .upper .container .logo-and-text img {
+  margin-bottom: 30px;
+}
+footer .upper .container .content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .upper .container .content-box p {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+footer .upper .container .content-box a {
+  display: block;
+}
+footer .lower {
   border-top: 1px solid #3E404D;
 }
-footer .container .footer-bottom .copyright {
-  color: #B6B6BC;
+footer .lower .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
 }
-footer .container .footer-bottom .social-media i {
+footer .lower .container .copyright {
+  font-size: 15px;
+}
+footer .lower .container .social-media {
+  display: flex;
+  gap: 26px;
+}
+footer .lower .container .social-media i {
   color: white;
 }
