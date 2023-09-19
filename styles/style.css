@@ -76,13 +76,15 @@ a:hover {
 }
 
 .btn-black {
-  background-color: #F9D783;
-  border: 1px solid #F9D783;
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: #FFFFFF;
   height: 46px;
   border-radius: 999px;
   transition: background-color 0.15s, color 0.15s;
 }
 .btn-black i {
+  color: #FFFFFF;
   margin-left: 8px;
   transition: background-color 0.15s, color 0.15s;
 }
@@ -386,6 +388,51 @@ main .features .container .content-small.bottom-right {
   main .features {
     display: none;
   }
+}
+main .about-company .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+main .about-company .container .right {
+  width: 500px;
+}
+main .about-company .container .right .textbox {
+  margin-bottom: 50px;
+}
+main .about-company .container .right .buttons {
+  display: flex;
+  gap: 40px;
+}
+main .about-company .container .right .buttons .btncontainer {
+  border: 1px solid transparent;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 18px;
+  transition: border 0.15s, background-color 0.15s;
+}
+main .about-company .container .right .buttons .btncontainer:hover {
+  border: 1px solid black;
+  background-color: #F9D783;
+}
+main .about-company .container .right .buttons .btncontainer:hover .btn-play {
+  border: none;
+}
+main .about-company .container .right .buttons .btncontainer p {
+  margin: 0px 0px;
+}
+main .about-company .container .right .buttons .btncontainer .btn-play {
+  background-color: transparent;
+  border: 1px solid #191919;
+  height: 46px;
+  width: 46px;
+  border-radius: 999px;
+}
+main .about-company .container .right .buttons .btncontainer .btn-play i {
+  margin-left: 8px;
 }
 
 footer {
