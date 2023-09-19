@@ -29,7 +29,7 @@ a {
 
 // BUTTONS 
 //you have to set width for the buttons yourself
-.btn-yellow{
+.btn-yellow {
     background-color: #F9D783;
     border: 1px solid #F9D783;
     height: 46px;
@@ -60,7 +60,7 @@ a {
         }
     }
 }
-.btn-transparent{
+.btn-transparent {
     background-color: transparent;
     border: 1px solid #191919;
     height: 46px;
@@ -91,7 +91,7 @@ a {
         }
     }
 }
-.btn-black{
+.btn-black {
     background-color: #191919;
     border: 1px solid #191919;
     color: #FFFFFF;
@@ -103,6 +103,39 @@ a {
     i {
         color: #FFFFFF;
         margin-left: 8px;
+        transition: background-color 0.15s, color 0.15s;
+    }
+
+    &:hover {
+        background-color: #191919;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
+    }
+
+    &:active {
+        background-color: #9b9b9b;
+        color: #F9D783;
+
+        i {
+            color: #F9D783;
+        }
+    }
+}
+.btn-black-round {
+    background-color: #191919;
+    border: 1px solid #191919;
+    color: #FFFFFF;
+    height: 46px;
+    width: 46px;
+    border-radius: 999px;
+   
+    transition: background-color 0.15s, color 0.15s;
+    
+    i {
+        color: #FFFFFF;
         transition: background-color 0.15s, color 0.15s;
     }
 
@@ -383,9 +416,17 @@ main {
         }
     }
 
-// MÅSTE FIXA BORDERN HÄR, FUNKAR EJ MED BOOTSTRAP CONTAINER
+// BORDER FIXED, SECTION NOT RESPONSIVE YET
     .features {
-        
+        padding-bottom: 120px;
+        display: flex;
+        justify-content: center;
+
+        .wrapper-div {
+            border: 1px solid #D1D1D1;
+            padding: 0px 100px;
+        }
+
         .container {
             padding: 85px 0px;
             display: grid;
@@ -446,27 +487,45 @@ main {
                 }
             }
         }
-            
-        
+
         @media (max-width: 1199px) {
             display: none;
         }
-
-        
     }
 
+// SECTION NOT RESPONSIVE YET
     .about-company {
+        padding-bottom: 120px;
 
         .container {
             display: flex;
-            justify-content: space-between;
             align-items: start;
-            gap: 20px;
+            gap: 200px;
 
             .left {
 
+                position: relative;
+
                 img {}
-                .textbox {}
+                .textbox {
+                    height: 180px;
+                    width: 370px;
+                    background-color: #BEEBFF;
+                    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.131);
+
+                    position: absolute;
+                    bottom: 40px;
+                    left: -56px;
+
+                    padding-top: 40px;
+                    padding-left: 25px;
+
+                    .name {}
+
+                    span {
+                        color: #F94D1C;
+                    }
+                }
 
             }
 
@@ -475,13 +534,36 @@ main {
                 width: 500px;
 
                 .textbox {
-                    margin-bottom: 50px;
+                    margin-bottom: 116px;
 
+                    .head {
+                        color: #F94D1C;
+                        font-size: 18px;
+                    }
+
+                    h2 {
+                        margin-bottom: 25px;
+                    }
+
+                    p {
+                        line-height: 2;
+                        color: #5E5E5E;
+                        font-size: 15px;
+
+                        &.first {
+                            margin-bottom: 34px;
+                        }
+
+                    }
                 }
 
                 .buttons {
                     display: flex;
                     gap: 40px;
+
+                    .btn-black {
+                        width: 180px;
+                    }
                     
                     .btncontainer {
                         border:1px solid transparent;
@@ -521,6 +603,58 @@ main {
             }
         }
     }
+
+// SECTION NOT RESPONSIVE YET
+    .our-services {
+        background-color: #F0EFE9;
+        padding-bottom: 62px;
+
+        .container {
+
+            .head {
+                padding-top: 120px;
+                padding-bottom: 48px;
+                p {
+                    color: red;
+                }
+
+                h3 {
+                    width: 500px;
+                    font-size: 45px;
+                    font-weight: 900;
+                }
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 30px;
+    
+                .content-box {
+                    background-color: white;
+                    height: 333px;
+                    width: auto;
+                    padding: 47px 47px;
+
+                    .btn-black-round {
+                        
+                    }
+                }
+            }
+    
+            .button {
+                padding: 48px 50px;
+                display: flex;
+                justify-content: center;
+
+                .btn-transparent {
+                    height: 54px;
+                    width: 220px;
+                }
+            }
+        }
+    }
+
 }
 
 footer {

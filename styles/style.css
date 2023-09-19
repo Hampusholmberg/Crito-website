@@ -103,6 +103,34 @@ a:hover {
   color: #F9D783;
 }
 
+.btn-black-round {
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: #FFFFFF;
+  height: 46px;
+  width: 46px;
+  border-radius: 999px;
+  transition: background-color 0.15s, color 0.15s;
+}
+.btn-black-round i {
+  color: #FFFFFF;
+  transition: background-color 0.15s, color 0.15s;
+}
+.btn-black-round:hover {
+  background-color: #191919;
+  color: #F9D783;
+}
+.btn-black-round:hover i {
+  color: #F9D783;
+}
+.btn-black-round:active {
+  background-color: #9b9b9b;
+  color: #F9D783;
+}
+.btn-black-round:active i {
+  color: #F9D783;
+}
+
 .wrapper-grid {
   height: 100vh;
   display: grid;
@@ -327,6 +355,15 @@ main .customers .container .inception img {
     font-size: auto;
   }
 }
+main .features {
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+}
+main .features .wrapper-div {
+  border: 1px solid #D1D1D1;
+  padding: 0px 100px;
+}
 main .features .container {
   padding: 85px 0px;
   display: grid;
@@ -389,21 +426,58 @@ main .features .container .content-small.bottom-right {
     display: none;
   }
 }
+main .about-company {
+  padding-bottom: 120px;
+}
 main .about-company .container {
   display: flex;
-  justify-content: space-between;
   align-items: start;
-  gap: 20px;
+  gap: 200px;
+}
+main .about-company .container .left {
+  position: relative;
+}
+main .about-company .container .left .textbox {
+  height: 180px;
+  width: 370px;
+  background-color: #BEEBFF;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.131);
+  position: absolute;
+  bottom: 40px;
+  left: -56px;
+  padding-top: 40px;
+  padding-left: 25px;
+}
+main .about-company .container .left .textbox span {
+  color: #F94D1C;
 }
 main .about-company .container .right {
   width: 500px;
 }
 main .about-company .container .right .textbox {
-  margin-bottom: 50px;
+  margin-bottom: 116px;
+}
+main .about-company .container .right .textbox .head {
+  color: #F94D1C;
+  font-size: 18px;
+}
+main .about-company .container .right .textbox h2 {
+  margin-bottom: 25px;
+}
+main .about-company .container .right .textbox p {
+  line-height: 2;
+  color: #5E5E5E;
+  font-size: 15px;
+}
+main .about-company .container .right .textbox p.first {
+  margin-bottom: 34px;
 }
 main .about-company .container .right .buttons {
   display: flex;
   gap: 40px;
+}
+main .about-company .container .right .buttons .btn-black {
+  width: 180px;
 }
 main .about-company .container .right .buttons .btncontainer {
   border: 1px solid transparent;
@@ -433,6 +507,43 @@ main .about-company .container .right .buttons .btncontainer .btn-play {
 }
 main .about-company .container .right .buttons .btncontainer .btn-play i {
   margin-left: 8px;
+}
+main .our-services {
+  background-color: #F0EFE9;
+  padding-bottom: 62px;
+}
+main .our-services .container .head {
+  padding-top: 120px;
+  padding-bottom: 48px;
+}
+main .our-services .container .head p {
+  color: red;
+}
+main .our-services .container .head h3 {
+  width: 500px;
+  font-size: 45px;
+  font-weight: 900;
+}
+main .our-services .container .services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+main .our-services .container .services-grid .content-box {
+  background-color: white;
+  height: 333px;
+  width: auto;
+  padding: 47px 47px;
+}
+main .our-services .container .button {
+  padding: 48px 50px;
+  display: flex;
+  justify-content: center;
+}
+main .our-services .container .button .btn-transparent {
+  height: 54px;
+  width: 220px;
 }
 
 footer {
