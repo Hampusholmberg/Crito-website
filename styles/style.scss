@@ -16,11 +16,11 @@ h2 {
     font-size: 45px;
     font-weight: 900;
 }
-a {
-    &:hover {
-        text-decoration: underline;
-    }
+h3 {
+    font-size: 22px;
+    font-weight: 900;
 }
+
 
 
 
@@ -103,39 +103,6 @@ a {
     i {
         color: #FFFFFF;
         margin-left: 8px;
-        transition: background-color 0.15s, color 0.15s;
-    }
-
-    &:hover {
-        background-color: #191919;
-        color: #F9D783;
-
-        i {
-            color: #F9D783;
-        }
-    }
-
-    &:active {
-        background-color: #9b9b9b;
-        color: #F9D783;
-
-        i {
-            color: #F9D783;
-        }
-    }
-}
-.btn-black-round {
-    background-color: #191919;
-    border: 1px solid #191919;
-    color: #FFFFFF;
-    height: 46px;
-    width: 46px;
-    border-radius: 999px;
-   
-    transition: background-color 0.15s, color 0.15s;
-    
-    i {
-        color: #FFFFFF;
         transition: background-color 0.15s, color 0.15s;
     }
 
@@ -416,7 +383,7 @@ main {
         }
     }
 
-// BORDER FIXED, SECTION NOT RESPONSIVE YET
+// SECTION NOT RESPONSIVE YET
     .features {
         padding-bottom: 120px;
         display: flex;
@@ -503,30 +470,30 @@ main {
             gap: 200px;
 
             .left {
-
                 position: relative;
 
-                img {}
                 .textbox {
                     height: 180px;
                     width: 370px;
                     background-color: #BEEBFF;
                     box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.131);
-
                     position: absolute;
                     bottom: 40px;
                     left: -56px;
-
                     padding-top: 40px;
                     padding-left: 25px;
 
-                    .name {}
+                    .name {
+                        font-family: DM sans, inter, Arial, Helvetica, sans-serif;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
 
                     span {
                         color: #F94D1C;
+                        font-size: 15px;
                     }
                 }
-
             }
 
             .right  {
@@ -629,19 +596,48 @@ main {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 column-gap: 30px;
-    
+
                 .content-box {
                     background-color: white;
                     height: 333px;
                     width: auto;
-                    padding: 47px 47px;
+                    padding: 47px 30px;
+                    text-decoration: none;
 
-                    .btn-black-round {
-                        
+                    img {
+                        margin-bottom: 40px;
+                    }
+
+                    div {
+                        display: flex;
+                        justify-content: end;
+
+                        .btn-black-round {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            text-align: center;
+                            background-color: #191919;
+                            color: #FFFFFF;
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 25px;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #F9D783;
+                        text-decoration: underline;
+                        text-decoration-color: #191919;
+
+                        .btn-black-round {
+                            background-color: white;
+                            color: #191919;
+                        }
                     }
                 }
             }
-    
+
             .button {
                 padding: 48px 50px;
                 display: flex;
@@ -654,7 +650,6 @@ main {
             }
         }
     }
-
 }
 
 footer {
@@ -664,6 +659,12 @@ footer {
     .upper, .lower, .container, p, a, i {
         color: #B6B6BC;
         text-decoration: none;
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .upper {

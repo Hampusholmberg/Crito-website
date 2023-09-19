@@ -19,8 +19,9 @@ h2 {
   font-weight: 900;
 }
 
-a:hover {
-  text-decoration: underline;
+h3 {
+  font-size: 22px;
+  font-weight: 900;
 }
 
 .btn-yellow {
@@ -100,34 +101,6 @@ a:hover {
   color: #F9D783;
 }
 .btn-black:active i {
-  color: #F9D783;
-}
-
-.btn-black-round {
-  background-color: #191919;
-  border: 1px solid #191919;
-  color: #FFFFFF;
-  height: 46px;
-  width: 46px;
-  border-radius: 999px;
-  transition: background-color 0.15s, color 0.15s;
-}
-.btn-black-round i {
-  color: #FFFFFF;
-  transition: background-color 0.15s, color 0.15s;
-}
-.btn-black-round:hover {
-  background-color: #191919;
-  color: #F9D783;
-}
-.btn-black-round:hover i {
-  color: #F9D783;
-}
-.btn-black-round:active {
-  background-color: #9b9b9b;
-  color: #F9D783;
-}
-.btn-black-round:active i {
   color: #F9D783;
 }
 
@@ -448,8 +421,14 @@ main .about-company .container .left .textbox {
   padding-top: 40px;
   padding-left: 25px;
 }
+main .about-company .container .left .textbox .name {
+  font-family: DM sans, inter, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
 main .about-company .container .left .textbox span {
   color: #F94D1C;
+  font-size: 15px;
 }
 main .about-company .container .right {
   width: 500px;
@@ -534,7 +513,35 @@ main .our-services .container .services-grid .content-box {
   background-color: white;
   height: 333px;
   width: auto;
-  padding: 47px 47px;
+  padding: 47px 30px;
+  text-decoration: none;
+}
+main .our-services .container .services-grid .content-box img {
+  margin-bottom: 40px;
+}
+main .our-services .container .services-grid .content-box div {
+  display: flex;
+  justify-content: end;
+}
+main .our-services .container .services-grid .content-box div .btn-black-round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #191919;
+  color: #FFFFFF;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+main .our-services .container .services-grid .content-box:hover {
+  background-color: #F9D783;
+  text-decoration: underline;
+  text-decoration-color: #191919;
+}
+main .our-services .container .services-grid .content-box:hover .btn-black-round {
+  background-color: white;
+  color: #191919;
 }
 main .our-services .container .button {
   padding: 48px 50px;
@@ -553,6 +560,9 @@ footer {
 footer .upper, footer .lower, footer .container, footer p, footer a, footer i {
   color: #B6B6BC;
   text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 footer .upper .container {
   display: flex;
