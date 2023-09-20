@@ -358,7 +358,7 @@ main {
 
         .container {
 
-            .inception {
+            .div {
                 display: grid;
                 grid-template-columns: auto auto;
                 grid-template-rows: auto auto;
@@ -650,8 +650,60 @@ main {
             }
         }
     }
-}
 
+// SECTION NOT RESPONSIVE YET
+    .why-choose-us {
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 68px;
+
+            .left {
+                width: 400px;
+                
+                p {
+                    margin-bottom: 30px;
+                }
+
+                h2 {
+                    line-height: 1.3;
+                }
+            }
+
+            .content-box {
+                display: flex;
+                align-items: start;
+                gap: 20px;
+                margin-top: 37px;
+
+                &.first {
+                    margin-top: 55px;
+                }
+
+                .icon {
+                    padding: 10px;
+                    border: 1px solid #E7E7E7;
+                    border-radius: 50px;
+                }
+
+                .text {
+                    padding-bottom: 0px;
+
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        line-height: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
 footer {
     grid-area: footer;
     background-color: #0E1021;
