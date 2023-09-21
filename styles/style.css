@@ -549,7 +549,7 @@ main .our-services .container .head {
   padding-bottom: 48px;
 }
 main .our-services .container .head p {
-  color: red;
+  color: #F94D1C;
 }
 main .our-services .container .head h3 {
   width: 500px;
@@ -613,6 +613,9 @@ main .why-choose-us .container {
 }
 main .why-choose-us .container .left {
   width: 400px;
+}
+main .why-choose-us .container .left .head p {
+  color: #F94D1C;
 }
 main .why-choose-us .container .left p {
   margin-bottom: 30px;
@@ -800,6 +803,53 @@ main .testimonial .container .button {
 }
 main .testimonial .container .button .btn-black {
   width: 178px;
+}
+main .article-and-news .container .head {
+  margin-top: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+main .article-and-news .container .head p {
+  color: #F94D1C;
+}
+main .article-and-news .container .head h2 {
+  margin-bottom: 0px;
+}
+main .article-and-news .container .head .btn-transparent {
+  margin-bottom: 8px;
+  width: 210px;
+}
+main .article-and-news .container .content-wrapper {
+  display: flex;
+  margin-bottom: 80px;
+}
+main .article-and-news .container .content-wrapper .content-box .img-div {
+  width: auto;
+  position: relative;
+}
+main .article-and-news .container .content-wrapper .content-box .img-div .date {
+  background-color: #F9D783;
+  text-align: center;
+  width: 56px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+main .article-and-news .container .content-wrapper .content-box .img-div .date .day {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "DM Sans";
+  line-height: 0.6;
+}
+main .article-and-news .container .content-wrapper .content-box .img-div .date .month {
+  margin-bottom: 8px;
+  margin-top: 0px;
+  color: #5C5238;
+  font-family: "DM Sans";
 }
 main .get-news {
   background-color: #F0EFE9;

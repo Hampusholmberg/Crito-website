@@ -644,7 +644,7 @@ main {
                 padding-top: 120px;
                 padding-bottom: 48px;
                 p {
-                    color: red;
+                    color: #F94D1C;
                 }
 
                 h3 {
@@ -724,6 +724,12 @@ main {
 
             .left {
                 width: 400px;
+
+                .head {
+                    p {
+                        color: #F94D1C;
+                    }
+                }
                 
                 p {
                     margin-bottom: 30px;
@@ -970,11 +976,78 @@ main {
         }
     }
 
+// SECTION NOT RESPONSIVE YET
+    .article-and-news {
 
+        .container {
 
+            .head {
+                margin-top: 120px;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
 
+                p {
+                    color: #F94D1C;
+                }
 
-    
+                h2 {
+                    // padding-bottom: 0px;
+                    margin-bottom: 0px;
+                    // line-height: 0;
+                }
+
+                .btn-transparent {
+                    margin-bottom: 8px;
+                    width: 210px;
+                }
+            }
+
+            .content-wrapper {
+                display: flex;
+                margin-bottom: 80px;
+
+                .content-box {
+                    
+                    .img-div {
+                        width: auto;
+                        position: relative;                        
+
+                        img {
+                            // z-index: 0;
+                        }
+
+                        .date {
+                            background-color: #F9D783;
+                            text-align: center;
+                            width: 56px;
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+
+                            .day {
+                                margin-top: 16px;
+                                margin-bottom: 0px;
+                                font-size: 22px;
+                                font-weight: 900;
+                                font-family: 'DM Sans';
+                                line-height: 0.6;
+                            }
+                            
+                            .month {
+                                margin-bottom: 8px;
+                                margin-top: 0px;
+                                color: #5C5238;
+                                font-family: 'DM Sans';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 // SECTION NOT RESPONSIVE YET
     .get-news {
         background-color: #F0EFE9;
@@ -1002,11 +1075,6 @@ main {
     }
 }
 
-
-
-
-
- 
 footer {
     grid-area: footer;
     background-color: #0E1021;
