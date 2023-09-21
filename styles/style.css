@@ -236,11 +236,22 @@ main {
 main .showcase1 {
   padding-top: 20px;
   background-color: #F0EFE9;
+  position: relative;
+}
+main .showcase1 .background-lines {
+  position: absolute;
+  top: 531px;
+}
+@media (max-width: 1199px) {
+  main .showcase1 .background-lines {
+    display: none;
+  }
 }
 main .showcase1 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 1199px) {
   main .showcase1 .container h1 {
@@ -526,6 +537,12 @@ main .about-company .container .right .buttons .btncontainer .btn-play i {
 main .our-services {
   background-color: #F0EFE9;
   padding-bottom: 62px;
+  position: relative;
+}
+main .our-services .background-lines {
+  position: absolute;
+  right: 0px;
+  top: 654px;
 }
 main .our-services .container .head {
   padding-top: 120px;
@@ -666,6 +683,124 @@ main .project-and-case-studies .container .button {
   text-align: center;
   margin: 50px 0px;
 }
+main .meet-our-team {
+  background-color: #EDCF86;
+}
+main .meet-our-team .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+main .meet-our-team .container .head {
+  padding-bottom: 80px;
+}
+main .meet-our-team .container .head p {
+  color: #F94D1C;
+}
+main .meet-our-team .container .head div {
+  display: flex;
+  justify-content: space-between;
+}
+main .meet-our-team .container .head .btn-yellow {
+  border: 1px solid #191919;
+  width: 218px;
+}
+main .meet-our-team .container .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .meet-our-team .container .content-wrapper .content-box .name {
+  font-family: DM sans;
+  font-weight: 900;
+  font-size: 22px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+main .meet-our-team .container .content-wrapper .content-box .job-title {
+  font-size: 14px;
+  margin-top: 0px;
+}
+main .testimonial {
+  background-color: #EDCF86;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 120px;
+}
+main .testimonial .wrapper {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+@media (min-width: 1520px) {
+  main .testimonial .wrapper {
+    width: 1520px;
+  }
+}
+main .testimonial .wrapper .content-wrapper {
+  display: flex;
+}
+main .testimonial .container {
+  padding-bottom: 120px;
+}
+main .testimonial .container .head {
+  margin-top: 120px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+main .testimonial .container .head p {
+  color: #F94D1C;
+}
+main .testimonial .container .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+main .testimonial .container .content-wrapper .content-box {
+  width: 350px;
+}
+main .testimonial .container .content-wrapper .content-box .stars {
+  margin-bottom: 20px;
+}
+main .testimonial .container .content-wrapper .content-box .stars i {
+  color: #F94D1C;
+  font-size: 12px;
+  margin-right: 2px;
+}
+main .testimonial .container .content-wrapper .content-box p {
+  font-size: 18px;
+}
+main .testimonial .container .content-wrapper .content-box .reviewer {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: "img name" "img title";
+}
+main .testimonial .container .content-wrapper .content-box .reviewer img {
+  grid-area: img;
+  width: 66px;
+  height: 66px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 999px;
+}
+main .testimonial .container .content-wrapper .content-box .reviewer .name {
+  grid-area: name;
+  font-family: DM sans;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+main .testimonial .container .content-wrapper .content-box .reviewer .title {
+  grid-area: title;
+  color: #F94D1C;
+  font-size: 16px;
+}
+main .testimonial .container .button {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+main .testimonial .container .button .btn-black {
+  width: 178px;
+}
 main .get-news {
   background-color: #F0EFE9;
 }
@@ -683,6 +818,13 @@ main .get-news .email-form input {
   border: 1px solid white;
   border-radius: 999px;
 }
+main .get-news .email-form input::-moz-placeholder {
+  opacity: 0.3;
+}
+main .get-news .email-form input::placeholder {
+  opacity: 0.3;
+}
+
 footer {
   grid-area: footer;
   background-color: #0E1021;
