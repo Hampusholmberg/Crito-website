@@ -22,13 +22,9 @@ h3 {
 }
 
 
-
-
 //code for arrow-up-right 
 // <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-// BUTTONS 
-//you have to set width for the buttons yourself
 .btn-yellow {
     background-color: #F9D783;
     border: 1px solid #F9D783;
@@ -45,6 +41,8 @@ h3 {
     &:hover {
         background-color: #191919;
         color: #F9D783;
+        border: 1px solid #191919;
+
 
         i {
             color: #F9D783;
@@ -107,11 +105,14 @@ h3 {
     }
 
     &:hover {
-        background-color: #191919;
-        color: #F9D783;
+        color: #191919;
+        background-color: transparent;
+        border: 1px solid #191919;
+        height: 46px;
+        border-radius: 999px;
 
         i {
-            color: #F9D783;
+            color: #191919;
         }
     }
 
@@ -141,7 +142,6 @@ header {
     background-color: #F0EFE9;
 
     .container {
-
         @media (max-width: 991px) {
             display: flex;
             align-items: center;
@@ -272,6 +272,36 @@ header {
             margin-bottom: 20px;
         }
     }
+
+    .subpage-header {
+        position: relative;
+        height: 300px;
+
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                @media (max-width: 320px) {
+                    font-size: 48px;
+                }
+
+                text-align: center;
+                font-size: 56px;
+            }
+
+            .background-lines {
+                @media (max-width: 850px) {
+                    display: none;
+                }
+
+                position: absolute;  
+                left: 0px;
+                bottom: 0px;   
+            }
+        }
+    }
 }
 
 main {
@@ -283,11 +313,12 @@ main {
         position: relative;
 
         .background-lines {
-            @media (max-width: 1199px) {
+            @media (max-width: 835px) {
                 display: none;
             }
             position: absolute;
-            top:531px
+            left: 0px;
+            bottom: 0px;
         }
 
         .container {
@@ -466,6 +497,7 @@ main {
         }
 
         @media (max-width: 1199px) {
+            padding-bottom: 0px;
 
             .wrapper-div {
                 border: none;
@@ -515,16 +547,29 @@ main {
         }
     }
 
-// SECTION NOT RESPONSIVE YET
+    //Funkar inte responsivt ännu
     .about-company {
         padding-bottom: 120px;
 
         .container {
+            @media (max-width: 1199px) {
+                text-align: center;
+                justify-content: center;
+            }
+            @media (max-width: 1466px) {
+                gap: 50px;
+            }
+
             display: flex;
             align-items: start;
+            justify-content: center;
             gap: 200px;
 
             .left {
+                @media (max-width: 1199px) {
+                    display: none;
+                }
+
                 position: relative;
 
                 .textbox {
@@ -552,6 +597,13 @@ main {
             }
 
             .right  {
+                @media (max-width: 1199px) {
+                    // width: 70vw;
+                    width: auto;
+                }
+                @media (max-width: 834px) {
+                    width: auto;
+                }
 
                 width: 500px;
 
@@ -580,25 +632,33 @@ main {
                 }
 
                 .buttons {
+                    @media (max-width: 1199px) {
+                        justify-content: center;
+                    }
+                    @media (max-width: 429px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
                     display: flex;
                     gap: 40px;
 
                     .btn-black {
                         width: 180px;
                     }
-                    
+
                     .btncontainer {
-                        border:1px solid transparent;
+                        border: 1px solid transparent;
                         border-radius: 1000px;
                         display: flex;
                         align-items: center;
                         gap: 20px;
                         padding-right: 18px;
-
+                        width: 180px;
                         transition: border 0.15s, background-color 0.15s;
 
                         &:hover {
-                            border: 1px solid black;
+                            border: 1px solid #191919;
                             background-color: #F9D783;
 
                             .btn-play {
@@ -626,13 +686,17 @@ main {
         }
     }
 
-// SECTION NOT RESPONSIVE YET
-    .our-services {
+    .our-services { 
+        
+
         background-color: #F0EFE9;
         padding-bottom: 62px;
         position: relative;
 
         .background-lines{
+            @media (max-width: 1199px) {
+                display: none;
+            }
             position: absolute;
             right: 0px;
             top: 654px;
@@ -641,6 +705,10 @@ main {
         .container {
 
             .head {
+                @media (max-width: 1199px) {
+                    text-align: center;
+                }
+
                 padding-top: 120px;
                 padding-bottom: 48px;
                 p {
@@ -648,29 +716,58 @@ main {
                 }
 
                 h3 {
-                    width: 500px;
                     font-size: 45px;
                     font-weight: 900;
                 }
             }
 
             .services-grid {
+                
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 column-gap: 30px;
 
+                @media (max-width: 1199px) {
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 30px;
+                    row-gap: 30px;
+                }
+                @media (max-width: 575px) {
+                    column-gap: 15px;
+                    row-gap: 15px;
+                }
+                @media (max-width: 485px) {
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    row-gap: 20px;
+                }
+                
+
                 .content-box {
+                    @media (max-width: 485px) {
+                        width: 80vw;
+                    }
                     background-color: white;
                     height: 333px;
                     width: auto;
                     padding: 47px 30px;
                     text-decoration: none;
+                    position: relative;
 
                     img {
                         margin-bottom: 40px;
                     }
 
                     div {
+                        @media (max-width: 767px) {
+                            position: absolute;
+                            bottom: 25px;
+                            right: 25px;
+                        }
+                        @media (max-width: 485px) {
+                            // display: none;
+                        }
+
                         display: flex;
                         justify-content: end;
 
@@ -689,7 +786,6 @@ main {
 
                     &:hover {
                         background-color: #F9D783;
-                        text-decoration: underline;
                         text-decoration-color: #191919;
 
                         .btn-black-round {
@@ -713,77 +809,128 @@ main {
         }
     }
 
-// SECTION NOT RESPONSIVE YET
+    //Funkar responsivt, men ser inte så bra ut ännu
     .why-choose-us {
+        position: relative;
+
+        .background {
+            @media (max-width: 1199px) {
+                display: none;
+            }
+
+            height: 425px;
+            width: 55%;
+            background-color: #F0EFE9;
+            position: absolute;
+            z-index: -1;
+            bottom: -45px;
+            right: 0;
+
+            div {
+                flex-grow: 1;                    
+            }
+        }
 
         .container {
+            @media (max-width: 1199px) {
+                justify-content: center;
+
+                padding-left: 0px;
+                padding-right: 0px;
+                width: auto;
+            }
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 68px;
+            padding-top: 60px;
+            position: relative;
 
             .left {
+                @media (max-width: 1199px) {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    width: 100%;
+                }
                 width: 400px;
 
                 .head {
+
                     p {
                         color: #F94D1C;
-                    }
-                }
-                
-                p {
-                    margin-bottom: 30px;
-                }
-
-                h2 {
-                    line-height: 1.3;
-                }
-            }
-
-            .content-box {
-                display: flex;
-                align-items: start;
-                gap: 20px;
-                margin-top: 37px;
-
-                &.first {
-                    margin-top: 55px;
-                }
-
-                .icon {
-                    padding: 10px;
-                    border: 1px solid #E7E7E7;
-                    border-radius: 50px;
-                }
-
-                .text {
-                    padding-bottom: 0px;
-
-                    h3 {
                         margin-bottom: 20px;
                     }
 
-                    p {
-                        line-height: 0;
+                    h2 {
+                        margin-bottom: 0px;
+                        line-height: 1.2;
                     }
+                }
+
+                .content-box {
+                    
+                    display: flex;
+                    align-items: start;
+                    gap: 20px;
+                    margin-top: 37px;
+    
+                    &.first {
+                        margin-top: 40px;
+                    }
+    
+                    .icon {
+                        padding: 10px;
+                        border: 1px solid #E7E7E7;
+                        border-radius: 50px;
+                    }
+    
+                    .text {
+                        @media (max-width: 424px) {
+                            height: auto;
+                            padding-bottom: 0px;
+        
+                            h3 {
+                                // margin-bottom: 20px;
+                            }
+                        }
+
+                        padding-bottom: 0px;
+
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                @media (max-width: 1199px) {
+                    display: none;
+                }                
+
+                img {
+                    width: 90%;
+
                 }
             }
         }
     }
 
-// SECTION NOT RESPONSIVE YET
+    // måste göra content box klickbar
     .project-and-case-studies {
-        padding-top: 50px;
+        padding-top: 160px;
+        padding-bottom: 90px;
 
         .container {
             padding: 0px;
 
             .head {
                 text-align: center;
-                margin: 50px 0px;
+                margin-bottom: 97px;
 
                 p {
                     color: #F94D1C;
+                    margin-bottom: 22px;
                 }
             }
 
@@ -793,18 +940,31 @@ main {
                 justify-content: space-around;
                 gap: 21px;
 
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
+
                 .content-box {
 
                     img {
-                        margin-bottom: 40px;
+                        @media (max-width: 767px) {
+                            width: 80%;
+                        }
+
+                        margin-bottom: 42px;
                     }
 
                     .lower {
+                        @media (max-width: 767px) {
+                            width: 80%;
+                        }
+
                         display: flex;
                         justify-content: end;
                         border-top: 1px solid #E7E7E7;
                         padding-top: 35px;
                         padding-right: 20px;
+                        margin-bottom: 30px;
 
                         a {
                             text-decoration: none;
@@ -820,12 +980,17 @@ main {
 
             .button {
                 text-align: center;
-                margin: 50px 0px;
+                margin-top: 50px;
+
+                .btn-black {
+                    width: 238px;
+                }
+                
             }
         }
     }
 
-// SECTION NOT RESPONSIVE YET
+    //Funkar responsivt, men ser inte så bra ut ännu
     .meet-our-team {
         background-color: #EDCF86;
 
@@ -838,29 +1003,54 @@ main {
 
                 p {
                     color: #F94D1C;
+                    text-align: center;
                 }
 
                 div {
                     display: flex;
                     justify-content: space-between;
-                }
 
-                h2 {
+                    @media (max-width: 575px) {
+                        text-align: center;
+                        flex-direction: column;
+                        align-items: center;
+                    }
                 }
 
                 .btn-yellow {
+                    @media (max-width: 575px) {
+                        display: block;                       
+                    }
+
                     border: 1px solid #191919;
                     width: 218px;
                 }
             }
 
             .content-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
+                column-gap: 10px;
+
+                @media (max-width: 1199px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (max-width: 474px) {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
 
                 .content-box {
-                    
+
+                    img {
+                        @media (max-width: 1399px) {
+                            width: 100%;                            
+                        }
+                    }
+
                     .name {
                         font-family: DM sans;
                         font-weight: 900;
@@ -878,7 +1068,6 @@ main {
         }
     }
 
-// SECTION NOT RESPONSIVE YET
     .testimonial {
         background-color: #EDCF86;
         display: flex;
@@ -916,8 +1105,27 @@ main {
                 display: flex;
                 justify-content: space-around;
 
+                @media (max-width: 991px) {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 25px;
+                }
+
                 .content-box {
-                    width: 350px;
+                    @media (max-width: 991px) {
+                        max-width: 70%;
+                        min-width: 300px;
+                        border-bottom: 1px solid #E7E7E7;
+                        padding-bottom: 25px;
+
+                        &.first {
+                            border-top: 1px solid #E7E7E7;
+                            padding-top: 25px;
+                        }
+                    }
+
+                    width: 30%;
 
                     .stars {
                         margin-bottom: 20px;
@@ -930,9 +1138,11 @@ main {
                     }
 
                     p {
-                        font-size: 18px;
+                        font-size: 17px;
+                        line-height: 2;
+                        margin-bottom: 28px;
                     }
-                    
+
                     .reviewer {
                         display: grid;
                         grid-template-columns: 100px 1fr;
@@ -960,6 +1170,10 @@ main {
                             color: #F94D1C;
                             font-size: 16px;
                         }
+
+                        p {
+                            line-height: 1.5;
+                        }
                     }
                 }
             }
@@ -976,12 +1190,18 @@ main {
         }
     }
 
-// SECTION NOT RESPONSIVE YET
     .article-and-news {
 
         .container {
 
             .head {
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 20px;
+                }
+
                 margin-top: 120px;
                 margin-bottom: 30px;
                 display: flex;
@@ -1005,17 +1225,38 @@ main {
             }
 
             .content-wrapper {
+                @media (max-width: 1399px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                @media (max-width: 1199px) {
+                    // display: block;
+                    text-align: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 display: flex;
+                gap: 15px;
                 margin-bottom: 80px;
 
                 .content-box {
+                    @media (max-width: 1399px) {
+                        width: 40%;
+                        margin-bottom: 20px;
+                    }
+                    @media (max-width: 1199px) {
+                        width: auto;
+                    }
+
                     
                     .img-div {
                         width: auto;
-                        position: relative;                        
+                        position: relative;
 
                         img {
-                            // z-index: 0;
+                            width: 100%;
                         }
 
                         .date {
@@ -1048,30 +1289,180 @@ main {
         }
     }
 
-// SECTION NOT RESPONSIVE YET
     .get-news {
         background-color: #F0EFE9;
-        
+        position: relative;
+        z-index: 0;
+
+        img {
+            @media (max-width: 799px) {
+                display: none;
+            }
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+            z-index: -1;
+        }
+
         .container {
+            @media (max-width: 1199px) {
+                flex-direction: column;
+                gap: 25px;
+                text-align: center;
+            }
+
             padding: 100px 0px;
             display: flex;
             align-items: center;
-            justify-content: space-between;    
-        }
+            justify-content: space-between;
 
-        .email-form {
-            display: flex;
-            gap: 30px;
+            form {
+                @media (max-width: 575px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
 
-            input{
-                border:1px solid white;
-                border-radius: 999px;
+                display: flex;
+                gap: 30px;
 
-                &::placeholder{
-                    opacity: 0.3;
+                input{
+                    @media (max-width: 575px) {
+                        width: 80vw;
+                        height: 46px;
+                    }
+
+                    width: 308px;
+                    border:1px solid white;
+                    border-radius: 999px;
+                    padding-left: 20px;
+
+                    &::placeholder{
+                        opacity: 0.3;
+                    }
+                }
+
+                .btn-yellow {
+                    width: 170px;
                 }
             }
         }
+    }
+
+
+    //CONTACT specific styles
+
+    .contact-details {
+        margin-top: 120px;
+        margin-bottom: 80px;
+
+        .container {
+            @media (max-width: 767px) {
+                gap: 10px;
+            }
+            @media (max-width: 575px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .content-box { border: 1px solid #D1D1D1;
+                @media (max-width: 767px) {
+                    padding: 25px 0px;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                display: flex;
+                width: 420px;
+                justify-content: center;
+                gap: 24px;
+                padding: 50px 0px;
+
+                .icon {
+                    @media (max-width: 991px) {
+                        display: none;
+                    }
+
+                    border-radius: 999px;
+                    background-color: #191919;
+                    height: 60px;
+                    width: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+
+                .text {
+                    h3 {
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .message-us {
+        padding-bottom: 120px;
+
+        .container {
+            background-color: #F0EFE9;
+            text-align: center;
+            padding-top: 130px;
+            padding-bottom: 100px;
+
+            .content-box {
+                @media (max-width: 991px) {
+                    margin: 0px;
+                }
+
+                display: flex;
+                flex-flow: column;
+                margin: 0px 150px;
+
+                h2 {
+                    @media (max-width: 431px) {
+                        font-size: 35px;
+                    }
+
+                    margin-bottom: 22px;
+                }
+
+                input, textarea { 
+                    border: none;
+                    margin-bottom: 16px;
+                    height: 56px;
+                    border-radius: 28px;
+                    padding-left: 20px;
+
+                    &#c-message {
+                        padding-top: 14px;
+                        margin-bottom: 44px;
+                        height: 160px;
+                    }
+                }
+            }
+        }
+    }
+
+    .google-maps {
+        height: 620px;
+        width: 100%;
     }
 }
 
