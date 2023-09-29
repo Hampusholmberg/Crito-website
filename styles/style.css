@@ -64,17 +64,17 @@ h3 {
 }
 .btn-transparent:hover {
   background-color: #191919;
-  color: #F9D783;
+  color: #ffffff;
 }
 .btn-transparent:hover i {
-  color: #F9D783;
+  color: #ffffff;
 }
 .btn-transparent:active {
   background-color: #9b9b9b;
-  color: #F9D783;
+  color: #ffffff;
 }
 .btn-transparent:active i {
-  color: #F9D783;
+  color: #ffffff;
 }
 
 .btn-black {
@@ -102,10 +102,10 @@ h3 {
 }
 .btn-black:active {
   background-color: #9b9b9b;
-  color: #F9D783;
+  color: #ffffff;
 }
 .btn-black:active i {
-  color: #F9D783;
+  color: #ffffff;
 }
 
 .wrapper-grid {
@@ -237,6 +237,11 @@ header .subpage-header {
   position: relative;
   height: 300px;
 }
+@media (max-width: 425px) {
+  header .subpage-header {
+    height: 150px;
+  }
+}
 header .subpage-header .container {
   height: 100%;
   display: flex;
@@ -351,6 +356,12 @@ main .showcase1 .container .showcase-btns .learn-more {
 main .customers {
   padding-top: 70px;
   padding-bottom: 70px;
+}
+@media (max-width: 425px) {
+  main .customers {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 main .customers .container div {
   display: grid;
@@ -485,6 +496,11 @@ main .features .container .content-small.bottom-right {
 main .about-company {
   padding-bottom: 120px;
 }
+@media (max-width: 425px) {
+  main .about-company {
+    padding-bottom: 30px;
+  }
+}
 main .about-company .container {
   display: flex;
   align-items: start;
@@ -546,6 +562,11 @@ main .about-company .container .right {
 main .about-company .container .right .textbox {
   margin-bottom: 116px;
 }
+@media (max-width: 767px) {
+  main .about-company .container .right .textbox {
+    margin-bottom: 50px;
+  }
+}
 main .about-company .container .right .textbox .head {
   color: #F94D1C;
   font-size: 18px;
@@ -579,6 +600,9 @@ main .about-company .container .right .buttons {
 main .about-company .container .right .buttons .btn-black {
   width: 180px;
 }
+main .about-company .container .right .buttons a {
+  text-decoration: none;
+}
 main .about-company .container .right .buttons .btncontainer {
   border: 1px solid transparent;
   border-radius: 1000px;
@@ -591,10 +615,17 @@ main .about-company .container .right .buttons .btncontainer {
 }
 main .about-company .container .right .buttons .btncontainer:hover {
   border: 1px solid #191919;
-  background-color: #F9D783;
+  background-color: #191919;
+}
+main .about-company .container .right .buttons .btncontainer:hover p {
+  color: #ffffff;
 }
 main .about-company .container .right .buttons .btncontainer:hover .btn-play {
   border: none;
+  color: #ffffff;
+}
+main .about-company .container .right .buttons .btncontainer:active {
+  background-color: #9b9b9b;
 }
 main .about-company .container .right .buttons .btncontainer p {
   margin: 0px 0px;
@@ -610,9 +641,17 @@ main .about-company .container .right .buttons .btncontainer .btn-play i {
   margin-left: 8px;
 }
 main .our-services {
+  padding-top: 120px;
+  padding-bottom: 48px;
   background-color: #F0EFE9;
   padding-bottom: 62px;
   position: relative;
+}
+@media (max-width: 425px) {
+  main .our-services {
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
 }
 main .our-services .background-lines {
   position: absolute;
@@ -623,10 +662,6 @@ main .our-services .background-lines {
   main .our-services .background-lines {
     display: none;
   }
-}
-main .our-services .container .head {
-  padding-top: 120px;
-  padding-bottom: 48px;
 }
 @media (max-width: 1199px) {
   main .our-services .container .head {
@@ -768,6 +803,11 @@ main .why-choose-us .container .left {
     width: 100%;
   }
 }
+@media (max-width: 425px) {
+  main .why-choose-us .container .left .head {
+    text-align: center;
+  }
+}
 main .why-choose-us .container .left .head p {
   color: #F94D1C;
   margin-bottom: 20px;
@@ -813,6 +853,12 @@ main .why-choose-us .container .right img {
 main .project-and-case-studies {
   padding-top: 160px;
   padding-bottom: 90px;
+}
+@media (max-width: 425px) {
+  main .project-and-case-studies {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 }
 main .project-and-case-studies .container {
   padding: 0px;
@@ -861,6 +907,9 @@ main .project-and-case-studies .container .content-grid .content-box .lower a {
   text-decoration: none;
   color: #191919;
 }
+main .project-and-case-studies .container .content-grid .content-box .lower a:hover {
+  text-decoration: underline;
+}
 main .project-and-case-studies .container .content-grid .content-box .lower i {
   margin-left: 8px;
 }
@@ -868,18 +917,33 @@ main .project-and-case-studies .container .button {
   text-align: center;
   margin-top: 50px;
 }
+@media (max-width: 425px) {
+  main .project-and-case-studies .container .button {
+    margin-top: 15px;
+    padding-bottom: 20px;
+  }
+}
 main .project-and-case-studies .container .button .btn-black {
   width: 238px;
 }
 main .meet-our-team {
-  background-color: #EDCF86;
-}
-main .meet-our-team .container {
   padding-top: 120px;
   padding-bottom: 120px;
+  background-color: #EDCF86;
+}
+@media (max-width: 425px) {
+  main .meet-our-team {
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
 }
 main .meet-our-team .container .head {
   padding-bottom: 80px;
+}
+@media (max-width: 425px) {
+  main .meet-our-team .container .head {
+    padding-bottom: 30px;
+  }
 }
 main .meet-our-team .container .head p {
   color: #F94D1C;
@@ -903,6 +967,11 @@ main .meet-our-team .container .head .btn-yellow {
 @media (max-width: 575px) {
   main .meet-our-team .container .head .btn-yellow {
     display: block;
+  }
+}
+@media (max-width: 425px) {
+  main .meet-our-team .container .head .btn-yellow {
+    margin-top: 25px;
   }
 }
 main .meet-our-team .container .content-wrapper {
@@ -946,6 +1015,12 @@ main .testimonial {
   justify-content: center;
   padding-bottom: 120px;
 }
+@media (max-width: 425px) {
+  main .testimonial {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+}
 main .testimonial .wrapper {
   border: 1px solid #ffffff;
   border-radius: 5px;
@@ -960,10 +1035,16 @@ main .testimonial .wrapper .content-wrapper {
   display: flex;
 }
 main .testimonial .container {
-  padding-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+@media (max-width: 425px) {
+  main .testimonial .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 main .testimonial .container .head {
-  margin-top: 120px;
   margin-bottom: 80px;
   text-align: center;
 }
@@ -1046,8 +1127,15 @@ main .testimonial .container .button {
 main .testimonial .container .button .btn-black {
   width: 178px;
 }
-main .article-and-news .container .head {
+main .article-and-news {
   margin-top: 120px;
+}
+@media (max-width: 425px) {
+  main .article-and-news {
+    margin-top: 50px;
+  }
+}
+main .article-and-news .container .head {
   margin-bottom: 30px;
   display: flex;
   align-items: end;
@@ -1089,6 +1177,13 @@ main .article-and-news .container .content-wrapper {
     flex-direction: column;
     align-items: center;
   }
+}
+main .article-and-news .container .content-wrapper a {
+  text-decoration: none;
+}
+main .article-and-news .container .content-wrapper a:hover {
+  text-decoration: underline;
+  text-decoration-color: #191919;
 }
 @media (max-width: 1399px) {
   main .article-and-news .container .content-wrapper .content-box {
@@ -1194,6 +1289,12 @@ main .contact-details {
   margin-top: 120px;
   margin-bottom: 80px;
 }
+@media (max-width: 425px) {
+  main .contact-details {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 main .contact-details .container {
   display: flex;
   justify-content: space-between;
@@ -1253,11 +1354,22 @@ main .contact-details .container .content-box .text p {
 main .message-us {
   padding-bottom: 120px;
 }
+@media (max-width: 425px) {
+  main .message-us {
+    padding-bottom: 0px;
+  }
+}
 main .message-us .container {
   background-color: #F0EFE9;
   text-align: center;
   padding-top: 130px;
   padding-bottom: 100px;
+}
+@media (max-width: 425px) {
+  main .message-us .container {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
 }
 main .message-us .container .content-box {
   display: flex;
@@ -1374,4 +1486,7 @@ footer .lower .container .social-media {
 }
 footer .lower .container .social-media i {
   color: white;
+}
+footer .lower .container .social-media i:hover {
+  color: #7e7e7e;
 }
