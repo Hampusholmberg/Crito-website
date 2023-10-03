@@ -663,6 +663,9 @@ main .our-services .background-lines {
     display: none;
   }
 }
+main .our-services .container .head {
+  padding-bottom: 30px;
+}
 @media (max-width: 1199px) {
   main .our-services .container .head {
     text-align: center;
@@ -984,13 +987,6 @@ main .meet-our-team .container .content-wrapper {
 @media (max-width: 1199px) {
   main .meet-our-team .container .content-wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 474px) {
-  main .meet-our-team .container .content-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
   }
 }
 @media (max-width: 1399px) {
@@ -1485,7 +1481,7 @@ footer .lower .container .social-media {
   gap: 26px;
 }
 footer .lower .container .social-media i {
-  color: white;
+  color: #ffffff;
 }
 footer .lower .container .social-media i:hover {
   color: #7e7e7e;
