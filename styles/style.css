@@ -1724,6 +1724,7 @@ main .news-details .content .right div.recent-posts .last {
   border: none;
   padding-bottom: 0px;
 }
+
 footer {
   grid-area: footer;
   background-color: #0E1021;
