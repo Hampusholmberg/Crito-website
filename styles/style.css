@@ -512,6 +512,9 @@ main .about-company .container {
     text-align: center;
     justify-content: center;
   }
+  main .about-company .container .about-company-text {
+    text-align: start;
+  }
 }
 @media (max-width: 1466px) {
   main .about-company .container {
@@ -804,9 +807,17 @@ main .why-choose-us .container .left {
     padding-left: 5px;
     padding-right: 5px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 425px) {
+  main .why-choose-us .container .left .head {
+    text-align: center;
+  }
+}
+@media (max-width: 1199px) {
   main .why-choose-us .container .left .head {
     text-align: center;
   }
@@ -885,6 +896,14 @@ main .project-and-case-studies .container .content-grid {
     text-align: center;
   }
 }
+main .project-and-case-studies .container .content-grid .content-box {
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+main .project-and-case-studies .container .content-grid .content-box:hover {
+  text-decoration: underline;
+  text-decoration-color: #191919;
+}
 main .project-and-case-studies .container .content-grid .content-box img {
   margin-bottom: 42px;
 }
@@ -899,19 +918,11 @@ main .project-and-case-studies .container .content-grid .content-box .lower {
   border-top: 1px solid #E7E7E7;
   padding-top: 35px;
   padding-right: 20px;
-  margin-bottom: 30px;
 }
 @media (max-width: 767px) {
   main .project-and-case-studies .container .content-grid .content-box .lower {
     width: 80%;
   }
-}
-main .project-and-case-studies .container .content-grid .content-box .lower a {
-  text-decoration: none;
-  color: #191919;
-}
-main .project-and-case-studies .container .content-grid .content-box .lower a:hover {
-  text-decoration: underline;
 }
 main .project-and-case-studies .container .content-grid .content-box .lower i {
   margin-left: 8px;
@@ -1044,6 +1055,11 @@ main .testimonial .container .head {
   margin-bottom: 80px;
   text-align: center;
 }
+@media (max-width: 991px) {
+  main .testimonial .container .head {
+    margin-bottom: 40px;
+  }
+}
 main .testimonial .container .head p {
   color: #F94D1C;
 }
@@ -1055,7 +1071,6 @@ main .testimonial .container .content-wrapper {
   main .testimonial .container .content-wrapper {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 25px;
   }
 }
@@ -1076,6 +1091,11 @@ main .testimonial .container .content-wrapper .content-box {
 }
 main .testimonial .container .content-wrapper .content-box .stars {
   margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  main .testimonial .container .content-wrapper .content-box .stars {
+    text-align: center;
+  }
 }
 main .testimonial .container .content-wrapper .content-box .stars i {
   color: #F94D1C;
@@ -1169,7 +1189,6 @@ main .article-and-news .container .content-wrapper {
 }
 @media (max-width: 1199px) {
   main .article-and-news .container .content-wrapper {
-    text-align: center;
     flex-direction: column;
     align-items: center;
   }
@@ -1183,7 +1202,6 @@ main .article-and-news .container .content-wrapper a:hover {
 }
 @media (max-width: 1399px) {
   main .article-and-news .container .content-wrapper .content-box {
-    width: 40%;
     margin-bottom: 20px;
   }
 }
